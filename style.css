@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white
+}
+
+.container {
+    width: 100%;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 30px;
+    list-style: none;
+    position: relative;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    
+}
+.container ul :nth-child(1) {
+    width: 150px;
+    height: 40px;
+    margin-right: 60px;
+}
+
+.container ul li:nth-child(2) {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(37, 36, 36);
+    position: relative;
+}
+
+.container ul li .houselogo {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    position: absolute;
+    left: 10px;
+}
+
+.container ul li input {
+    position: relative;
+    padding-right: 200px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(37, 36, 36);
+    color: white;
+    font-size: 20px;
+    outline: none;
+    margin-left: 15px;
+}
+
+.container ul li .searchlogo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    z-index: 1;
+    top: 25px;
+    left: 320px;
+}
+
+.sign-up {
+    border: none;
+    background-color: rgb(37, 36, 36);
+    border-radius: 2rem;
+    padding: 10px 0px 10px 0px;
+    ;
+    font-weight: bolder;
+    width: 80px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    right: 90px;
+}
+
+.login-in {
+    background-color: rgb(247, 245, 245);
+    border: none;
+    border-radius: 2rem;
+    padding: 10px 0px 10px 0px;
+    ;
+    font-weight: bolder;
+    width: 80px;
+    text-align: center;
+    color: rgb(8, 8, 8);
+    position: absolute;
+    right: 5px;
+}
+.main{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.left {
+    background-color: rgb(37, 36, 36);
+    height: 100%;
+    width: 20vw;
+    border-radius: 2rem;
+text-align:center;
+
+}
+
+.right {
+    background-color: rgb(37, 36, 36);
+    height: 100%;
+    width: 80vw;
+    border-radius: 2rem;
+    text-align:center;
+}
