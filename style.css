@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .container ul {
@@ -84,12 +84,17 @@ body {
     border-radius: 2rem;
     padding: 10px 0px 10px 0px;
     ;
-    font-weight: bolder;
+    font-weight: bold;
     width: 80px;
     text-align: center;
     color: white;
     position: absolute;
     right: 90px;
+    
+}
+.sign-up:hover{
+    padding: 9px;
+    font-weight: 900;
 }
 
 .login-in {
@@ -97,13 +102,18 @@ body {
     border: none;
     border-radius: 2rem;
     padding: 10px 0px 10px 0px;
-    ;
     font-weight: bolder;
     width: 80px;
     text-align: center;
     color: rgb(8, 8, 8);
     position: absolute;
     right: 5px;
+    cursor: pointer;
+}
+
+.login-in:hover{
+    padding: 9px;
+    font-weight: 900;
 }
 
 .main {
@@ -120,14 +130,6 @@ body {
     text-align: center;
     color: white;
     position: relative;
-}
-
-.right {
-    background-color: rgb(37, 36, 36);
-    height: 100%;
-    width: 80vw;
-    border-radius: 2rem;
-    text-align: center;
 }
 
 .library-svg {
@@ -222,4 +224,100 @@ body {
 .footer a{
     text-decoration: none;
     color: grey;
+}
+
+.right{
+    background-color: rgb(37, 36, 36);
+    height: 100%;
+    width: 80vw;
+    height: 100vh;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.heading{
+    position: relative;
+    height: 10vh;
+}
+
+.heading h1{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.cards{
+    width: 70vw;
+    max-height: 70vh;
+    margin-left: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 16px; /* Thicker scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333; /* Thumb (scroll handle) */
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Hover color for thumb */
+}
+
+::-webkit-scrollbar-button {
+    display: none; /* Hides the up/down buttons */
+}
+* {
+    scrollbar-width: auto; /* Adjust scrollbar width */
+    scrollbar-color: #333 #1a1a1a; /* Thumb color, Track color */
+}
+
+
+
+
+
+
+
+.card{
+    height: 37vh;
+    width: 13vw;
+    padding: 15px 15px 7px 15px;
+    background-color:  rgb(66, 65, 65);
+    border-radius: 1rem;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    
+}
+.card h3,p{
+    padding-top: 4px;
+}
+.card p{
+    font-size: 12px;
+}
+
+.playbt{
+    position: absolute;
+    top: 185px;
+    right: 12px;
+    opacity: 1;
+    transition: all 2s ease-out;
+}
+
+.hover:hover{
+    opacity: 0;
+    top: 240px;
 }
