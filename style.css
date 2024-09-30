@@ -8,9 +8,7 @@ body {
     color: white
 }
 
-.container {
-    /* width: 100%; */
-}
+
 
 .container ul {
     display: flex;
@@ -90,9 +88,10 @@ body {
     color: white;
     position: absolute;
     right: 90px;
-    
+
 }
-.sign-up:hover{
+
+.sign-up:hover {
     padding: 9px;
     font-weight: 900;
 }
@@ -111,7 +110,7 @@ body {
     cursor: pointer;
 }
 
-.login-in:hover{
+.login-in:hover {
     padding: 9px;
     font-weight: 900;
 }
@@ -125,12 +124,19 @@ body {
 .left {
     background-color: rgb(37, 36, 36);
     height: 100vh;
-    width: 20vw;
+    width: 30vw;
     border-radius: 0.5rem;
     text-align: center;
     color: white;
     position: relative;
 }
+
+@media only screen and (max-width: 932px) {
+    .left {
+        display: none;
+    }
+}
+
 
 .library-svg {
     width: 30px;
@@ -177,12 +183,13 @@ body {
 }
 
 .content-1::-webkit-scrollbar-track {
-    background: transparent; /* Background of the scroll bar track */
+    background: transparent;
+    /* Background of the scroll bar track */
 }
 
 .content-1::-webkit-scrollbar-thumb {
-    background-color: rgb(5, 5, 5); 
-    border-radius: 1rem; 
+    background-color: rgb(5, 5, 5);
+    border-radius: 1rem;
 }
 
 .bt {
@@ -194,24 +201,27 @@ body {
     font-size: 12px;
     font-weight: bolder;
     color: rgb(0, 0, 0);
-   
+
 }
-.div-1{
+
+.div-1 {
     font-size: 20px;
     margin-top: 18px;
 }
-.div-3{
+
+.div-3 {
     font-size: 17px;
     margin-top: 20px;
 }
-.div-4{
+
+.div-4 {
     font-size: 15px;
 }
 
 
-.footer{
+.footer {
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -221,15 +231,16 @@ body {
     justify-content: flex-start;
     width: 100%;
 }
-.footer a{
+
+.footer a {
     text-decoration: none;
     color: grey;
 }
 
-.right{
+.right {
     background-color: rgb(37, 36, 36);
     height: 100%;
-    width: 80vw;
+    width: 75vw;
     height: 100vh;
     border-radius: 0.5rem;
     text-align: center;
@@ -237,18 +248,29 @@ body {
     position: relative;
 }
 
-.heading{
+@media only screen and (max-width: 932px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+
+.heading {
     position: relative;
     height: 10vh;
 }
 
-.heading h1{
+.heading h1 {
     position: absolute;
     left: 20px;
     top: 20px;
 }
 
-.cards{
+.cards {
     width: 70vw;
     max-height: 70vh;
     margin-left: 55px;
@@ -259,28 +281,36 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 16px; /* Thicker scrollbar */
+    width: 16px;
+    /* Thicker scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #1a1a1a; /* Track background */
+    background-color: #1a1a1a;
+    /* Track background */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #333; /* Thumb (scroll handle) */
+    background-color: #333;
+    /* Thumb (scroll handle) */
     border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Hover color for thumb */
+    background-color: #555;
+    /* Hover color for thumb */
 }
 
 ::-webkit-scrollbar-button {
-    display: none; /* Hides the up/down buttons */
+    display: none;
+    /* Hides the up/down buttons */
 }
+
 * {
-    scrollbar-width: auto; /* Adjust scrollbar width */
-    scrollbar-color: #333 #1a1a1a; /* Thumb color, Track color */
+    scrollbar-width: auto;
+    /* Adjust scrollbar width */
+    scrollbar-color: #333 #1a1a1a;
+    /* Thumb color, Track color */
 }
 
 
@@ -289,27 +319,31 @@ body {
 
 
 
-.card{
+.card {
     height: 37vh;
     width: 13vw;
     padding: 15px 15px 7px 15px;
-    background-color:  rgb(66, 65, 65);
+    background-color: rgb(66, 65, 65);
     border-radius: 1rem;
     position: relative;
 }
-.card img{
+
+.card img {
     width: 100%;
     object-fit: contain;
-    
+
 }
-.card h3,p{
+
+.card h3,
+p {
     padding-top: 4px;
 }
-.card p{
+
+.card p {
     font-size: 12px;
 }
 
-.playbt{
+.playbt {
     position: absolute;
     top: 185px;
     right: 12px;
@@ -317,7 +351,116 @@ body {
     transition: all 2s ease-out;
 }
 
-.hover:hover{
+.hover:hover {
     opacity: 0;
     top: 240px;
+}
+
+.playbutton {
+    position: fixed;
+    bottom: 6px;
+    right: 215px;
+    background-color: rgb(77 82 82);
+    width: 50vw;
+    height: 6vh;
+    border-radius: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+    bottom: 9px;
+}
+
+.songlist {
+    margin: 0;
+    /* No margin */
+    padding-left: 20px;
+    /* No padding */
+    height: 450px;
+    overflow: auto;
+
+}
+
+.songlist ul {
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+    display: flex;
+    /* Use flexbox for alignment */
+    flex-direction: column;
+    /* Arrange items in a column */
+    align-items: flex-start;
+    /* Align items to the start (left) */
+}
+
+.songlist ul li {
+    margin: 2px 0;
+    /* Vertical margin between items */
+    padding: 9px;
+    /* Padding inside each list item */
+    width: 90%;
+    /* Full width of the parent */
+    text-align: left;
+    /* Align text to the left */
+    list-style: none;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.playnow {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.seekbar {
+    width: 95%;
+    /* border: 2px solid red; */
+    margin-left: 22px;
+    position: absolute;
+    bottom: 14px;
+    height: 8px;
+    border-radius: 5px;
+    filter: invert(1);
+    background-color: #232222;
+    cursor: pointer;
+}
+.circle{
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #232222;
+    filter: invert(1);
+    position: relative;
+    bottom: 6px;
+    left: -1px;
+    transition: left 0.5s;
+    cursor: pointer;
+}
+.songinfo{
+    filter: invert(1);
+    /* background-color: #1a1a1a; */
+    position: absolute;
+    left: 58px;
+    bottom: 5px;
+}
+.songtime{
+    filter: invert(1);
+    /* background-color: #b5acac; */
+    position: absolute;
+    left: 61px;
+    bottom: -3px;
 }
