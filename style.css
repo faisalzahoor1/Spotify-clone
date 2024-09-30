@@ -1,3 +1,7 @@
+:root{
+    --a:0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -326,6 +330,13 @@ body {
     background-color: rgb(66, 65, 65);
     border-radius: 1rem;
     position: relative;
+
+}
+.card:hover{
+    background-color: #1a1a1a;
+    --a:1;
+    cursor: pointer;
+
 }
 
 .card img {
@@ -347,14 +358,11 @@ p {
     position: absolute;
     top: 185px;
     right: 12px;
-    opacity: 1;
+    opacity: var(--a);
     transition: all 2s ease-out;
 }
 
-.hover:hover {
-    opacity: 0;
-    top: 240px;
-}
+
 
 .playbutton {
     position: fixed;
