@@ -1,5 +1,3 @@
-
-
 let currsong = new Audio();
 let songs;
 let currFolder;
@@ -13,7 +11,6 @@ async function getsongs(folder) {
     let div = document.createElement("div");
     div.innerHTML = response;
     let as = div.getElementsByTagName("a");
-    console.log(as);
     songs = [];
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
@@ -39,9 +36,6 @@ async function getsongs(folder) {
                             </div>
                         </div>
                     </li>`
-        // let li = document.createElement('li');
-        // li.textContent = song.replaceAll("%20"," "); // Ensure no extra spaces or line breaks in song name
-        // songul.appendChild(li);  // Append each song as an <li> item
     }
 
     Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
@@ -49,6 +43,7 @@ async function getsongs(folder) {
             playmusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
     })
+    return songs;
 
 }
 
@@ -63,11 +58,11 @@ function formatTime(seconds) {
 
 const playmusic = (track, pause = false) => {
     currsong.src = `/${currFolder}/` + track;
+    console.log(currsong.src)
     if (!pause) {
-        // currsong.play();
+        currsong.play();
         play.src = "pause.svg";
     }
-    // currsong.play();
     document.querySelector(".songinfo").innerHTML = decodeURI(track);
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
 }
@@ -87,7 +82,7 @@ async function songAlbum() {
             let folder = e.href.split("/").slice(-2)[0];
             let a = await fetch(`http://192.168.18.128:3000/songs/${folder}/info.json`);
             let response = await a.json();
-            cards.innerHTML = cards.innerHTML + `<div data-folder="ncs" class="card">
+            cards.innerHTML = cards.innerHTML + `<div data-folder= ${folder} class="card">
                     <div class="playbt">
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100">
                             <!-- Smaller Green Circle -->
@@ -105,7 +100,8 @@ async function songAlbum() {
     }
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
-            songs = await getsongs(`/songs/${item.currentTarget.dataset.folder}`);
+            songs = await getsongs(`songs/${item.currentTarget.dataset.folder}`);
+            playmusic(songs[0]);
         })
     })
 }
